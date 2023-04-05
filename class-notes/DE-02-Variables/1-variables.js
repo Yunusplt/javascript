@@ -24,11 +24,10 @@ console.log(typeof yas);
 //const degiskenine baslangic atamasi yapmak zorunlu...
 
 const isTrue=true;
-console.log(typeof isTrue);
+console.log(typeof isTrue);  // boolean
 
 const dolar=1.5;
-
-console.log(typeof dolar);
+console.log(typeof dolar);  // number
 
 // noktali sayi da olsa float yerine number olarak tanimliyor.
 
@@ -45,20 +44,19 @@ console.log(typeof dolar);
 
 let dil="JavaScript";
 dil="java";
-console.log(dil);
+console.log(dil);   //java
 
 dil = true;
 
 console.log(typeof dil);
 
 let sayi=5;
-
-console.log(7+sayi);
+console.log(7+sayi);   //12
 
 let sayi1="5";
+console.log(7+sayi1);  //75
 
-
-console.log(7+sayi1);
+console.log(typeof (sayi1+sayi));  //String  string + number = string
 //! bir string ile number toplanırsa aslında toplama yapmaz, onları iki kelime gibi yanyana yazar
 isim="ipek";
 
@@ -86,23 +84,23 @@ console.log(sayi2)
 console.log("******************************");
 
 var ilk="GLOBAL"
-console.log(ilk);
+console.log(ilk);   //GLOBAL
 
 
 {
 
-    console.log(ilk);
+    console.log(ilk);  //GLOBAL
 
     ilk="degistim";
 
-    console.log(ilk);
+    console.log(ilk);  //degistim
 
     var ikinci="naber"
 }
 
-console.log(ilk);
+console.log(ilk);   //degistim
 
-console.log(ikinci);
+console.log(ikinci);  //naber
 
 // var keywordü kullanilinca blok icerisinde ve disarisinda variable a erisilir. Eger var ile blok icinde tanimlanmissa blok disinda da variable a erisilir.
 
@@ -114,25 +112,26 @@ console.log("******************************");
 
 let first="Osman";
 
-console.log(first);
+console.log(first);  // Osman
 
 
 {
 
-    console.log(first);
+    console.log(first);  // Osman
 
     let second="Halit";
 
-    console.log(second);
+    console.log(second);  // Halit
 
     first="Hüseyin"
 
-    console.log(first);
+    console.log(first); // Hüseyin
 }
 
 //console.log(second);
 
-console.log(first);
+console.log(first);   // Hüseyin 
+//console.log(second);    //Localde let ile tanimlanan second globalde gözükmez. var ile tanimlansaydi gözükürdü.
 
 
 //! LET TEKI ayni islemleri const icinde yaptik 

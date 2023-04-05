@@ -8,9 +8,9 @@
 //!----------------------------------------------------------
 
 //? Prompt fonskiyonu ile console ortamında kullanıcıdan veri almak mümkündür.
-console.log("-------------------------------------");
-console.log("==IF-ELSE IF== 4 Islem Hesap Makinesi");
-console.log("-------------------------------------");
+// console.log("-------------------------------------");
+// console.log("==IF-ELSE IF== 4 Islem Hesap Makinesi");
+// console.log("-------------------------------------");
 
 // const sayi1=+prompt("1. sayiyi giriniz")
 // const islem=prompt("+,-,*,/ islemlerinden birisini giriniz")
@@ -29,9 +29,9 @@ console.log("-------------------------------------");
 //   sonuc = sayi1 * sayi2;
 // } else if (islem == "/") {
 //   if (sayi2 != 0) {
-    // sonuc = sayi1 / sayi2;
+//     sonuc = sayi1 / sayi2;
 //   } else {
-    // alert("payda 0 olamaz");
+//     alert("payda 0 olamaz");
 //   }
 // } else {
 //   alert("yanliş işlem girdiniz");
@@ -43,27 +43,27 @@ console.log("-------------------------------------");
 
 
 
-//*ORNEK
-const yas=20
-const cinsiyet="erkek"
-const saglik=true
+//ORNEK
+// const yas=20
+// const cinsiyet="erkek"
+// const saglik=true
 
-if (yas>=20 && cinsiyet=="erkek" && saglik==true) {
-    console.log("askerlik yapmaya uygundur.");
-}
+// if (yas>=20 && cinsiyet=="erkek" && saglik==true) {
+//     console.log("askerlik yapmaya uygundur.");
+// }
 
-else{
-    console.log("askerlik yapmaya elverisli degildir.");
-}
+// else{
+//     console.log("askerlik yapmaya elverisli degildir.");
+// }
 
 
 //!ternary  if else kisa kullanim.(else if var ise kullanilmaz)
-(yas>=20 && cinsiyet=="erkek" && saglik==true)? console.log("askerlik yapmaya uygundur."):console.log("askerlik yapmaya elverisli degildir.");
+// (yas>=20 && cinsiyet=="erkek" && saglik==true)? console.log("askerlik yapmaya uygundur."):console.log("askerlik yapmaya elverisli degildir.");
 
 
-console.log("-------------------------------------");
-console.log("==SWITCH-CASE== 4 Islem Hesap Makinesi");
-console.log("-------------------------------------");
+// console.log("-------------------------------------");
+// console.log("==SWITCH-CASE== 4 Islem Hesap Makinesi");
+// console.log("-------------------------------------");
 
 // const s1=+prompt("1. sayiyi giriniz")
 // const islem2=prompt("+,-,*,/ islemlerinden birisini giriniz")
@@ -72,27 +72,25 @@ console.log("-------------------------------------");
 // let sonuc2=0;
 
 // switch (islem2) {
-    // case "+":
-        // sonuc2 = s1+s2
-        // break;
-    // case "-":
-        // sonuc2 = s1-s2
-        // break;
-    // case "*":
-        // sonuc2 = s1*s2
-        // break;
-    // case "/":
-        // if (s2!==0) {
-        // sonuc2=s1/s2
-        }
-        // else(alert("payda 0 olmaz"))
-        // break;
+//     case "+":
+//         sonuc2 = s1+s2
+//         break;
+//     case "-":
+//         sonuc2 = s1-s2
+//         break;
+//     case "*":
+//         sonuc2 = s1*s2
+//         break;
+//     case "/":
+//         if (s2!==0) {
+//         sonuc2=s1/s2
+//         }
+//         else(alert("payda 0 olmaz"))
+//         break;
 
-
-
-    // default:
-        // alert("Yanlis deger girdiniz")
-        // break;
+//     default:
+//         alert("Yanlis deger girdiniz")
+//         break;
 // }
 
 // console.log(`${s1} ${islem2} ${s2} = ${sonuc2}`);
@@ -104,12 +102,12 @@ console.log("-------------------------------------");
 
 
 
-const asgariUcret=8000
-const maas=+prompt("maasini gir")
+// const asgariUcret=8000
+// const maas=+prompt("maasini gir")
 
- const zamliMaas= maas<= asgariUcret ? maas*1.25 : maas*1.10  
+//  const zamliMaas= maas<= asgariUcret ? maas*1.25 : maas*1.10  
 
-console.log(zamliMaas);
+// console.log(zamliMaas);
 
 
 //?Ornek:10 aylık maasınız borcunuzdan 5000 ve üstü kadar fazlaysa kredi alabilirsiniz, aksi durumda alamazsınız

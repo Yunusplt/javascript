@@ -1,6 +1,3 @@
-
-
-
 const sucuk = 250;
 const cola=20;
 const peynir=200;
@@ -62,7 +59,7 @@ console.log(`${name1 } ${2023-dogumTarihi} yasindadir.`);
 
 let a=5
 
-console.log("ilk", a++,a);
+console.log("ilk", a++,a);   //ilk 5 6
 
 //!!!!ACHTUNGGG   a yi önce 5 alir. pluslari daha sonra gördügü icin ikinci a ya 6 degerini atar.
 
@@ -122,11 +119,14 @@ console.log(Math.ceil(cevre)); //19
 console.log(Math.trunc(alan));  //28   tam kismi alir. 
 console.log(Math.trunc(cevre));  //18  tam kismi alir.
 
+console.log(Math.round(alan));   // 28
+console.log(Math.round(cevre));  // 19
+
 
 
 const ab=-1.3
-console.log(Math.trunc(ab));
-console.log(Math.floor(ab));
+console.log(Math.trunc(ab));    // -1
+console.log(Math.floor(ab));    // -2
 
 
 //********* */ MOD ALMA***********
@@ -134,14 +134,14 @@ console.log(Math.floor(ab));
 const number=456;
 
 const birler=number%10
-console.log(birler);
+console.log(birler);        // 6
 
 const onlar=Math.trunc(number/10)%10
-console.log(onlar);
+console.log(onlar);         // 5
 
 const yüzler=Math.floor(number/100)
 
-console.log(yüzler);
+console.log(yüzler);        // 4
 
 
 
@@ -175,15 +175,15 @@ console.log(sayi1<=4); //true
 
 const para = Number("1000") + Number("900")
 console.log(para);
-console.log(typeof para);
+console.log(typeof para);   // number
 
 console.log(Number("")); //hiclik sayiya döndürülür ise 0 degerini alir
 
-console.log(Number(null));
+console.log(Number(null));  // 0
 
-console.log(Number(true));
+console.log(Number(true));   // 1
 
-console.log(Number(false));
+console.log(Number(false));    // 0
 
 
 
@@ -194,33 +194,33 @@ console.log(Number(false));
 
 
 //? TRUE
-console.log(Boolean(5));//true
-console.log(Boolean(-5));//true
-console.log(Boolean(-15.5));//true
+console.log(Boolean(5));  //true
+console.log(Boolean(-5));  //true
+console.log(Boolean(-15.5));   //true
 
 //? 5 falsy
-console.log(Boolean(0)); //false
-console.log(Boolean(null));//false
-console.log(Boolean(""));//false
-console.log(Boolean(undefined));//false
-console.log(Boolean(NaN));//false
+console.log(Boolean(0));  //false
+console.log(Boolean(null));   //false
+console.log(Boolean(""));   //false
+console.log(Boolean(undefined));   //false
+console.log(Boolean(NaN));   //false
 
 
 const v1=false || 0 || 12.6 || true || false || null
-console.log(v1);
+console.log(v1);  // 12.6
 
 const v2= false || 0 || null || undefined || NaN
-console.log(v2);
+console.log(v2);   // NaN
 
 const v3=5 && true && true && 0 && ""
-console.log(v3);
-console.log(Boolean(v3));
+console.log(v3);    // 0
+console.log(Boolean(v3));  // false
 
 const v4=6 && true && 12.5 && 7 
-console.log(v4);
+console.log(v4);   // 7
 
-console.log(!v4);
-console.log(!v2);
+console.log(!v4);  // false
+console.log(!v2);  // True
 
 
 
