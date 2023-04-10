@@ -5,11 +5,12 @@
 //************************ FOR ****************************
 
 
-// for (let index = 1; index <=10; index++){
-//     console.log(index, "MERHABA");
-// }
+for (let index = 1; index <=10; index++){
+    console.log(index, "MERHABA");
+}
 
-// // 1 den n e kadar olan sayilarin toplami 
+
+//! 1 den n e kadar olan sayilarin toplami 
 
 // const N = +prompt("lütfen N'i giriniz.")
 
@@ -26,6 +27,30 @@
 
 //? ÖRNEK: Dışarıdan girilen sayının Asal olup olmadığını tespit ederek sonucu yazdıran programı yazınız.
 
+//!Umit cözüm
+// const asalmi = +prompt("Asallik kontrolü icin bir sayi giriniz")
+// let asal_bool = false;
+
+// for( i=2 ; i < asalmi ; i++){
+
+
+//     asal_bool = !(asalmi % i == 0);
+//     if(!asal_bool){
+//         break;
+//     }
+
+// }
+// if(asal_bool){
+//     alert("asal")
+//   }
+//   else{
+//     alert("asal degil")
+//   }
+
+
+
+
+
 
 // const sayi=+prompt("asallik kontrolü için bir sayi giriniz")
 // let asal=true;
@@ -40,18 +65,25 @@
 // }
 // console.log(asal == true ? " asaldir" : "asal değildir");
 
-//! console.log(asal ? " asaldir" : "asal değildir");  böylede yazilabilir
+// console.log(asal ? " asaldir" : "asal değildir");  
 
-// aksi yazilacagi zaman böyle yazilir !asal ? "asaldir" : "asal degildir"
+// böylede yazilabilir aksi yazilacagi zaman böyle yazilir !asal ? "asaldir" : "asal degildir"
 
 
 
 
 //todo 3.ders ###########################
 
-// //? Ornek: 0-100 Arasinda n adet rasgele tamsayi sayi ureten kodu
-// //? for dongusu ile yaziniz..
-//ilk soru eksik 
+//? Ornek: 0-100 Arasinda n adet rasgele tamsayi sayi ureten kodu
+//? for dongusu ile yaziniz..
+
+for (let i = 1; i <= 7; i++) {
+  const rastgele = Math.round(Math.random() * 100);
+  console.log(rastgele);
+}
+console.log(Math.round(Math.random()*100 ));
+
+
 
 
 //todo################    WHILE      ################
@@ -69,7 +101,7 @@
 // }
 
 // console.log("tebrikler", number);
-//! while daki şart true old sürece altındaki süslü işler, false old anda süslünün dışına çıkılır
+//! while daki şart true oldugu sürece altındaki süslü işler, false oldugu anda süslünün dışına çıkılır
 
 
 
@@ -87,7 +119,7 @@
 
 
 // şarta bakmadan ilk etapta do nun içindeki istek yapılır, sonrasında while içi true old sürece do içindeki istek yapılmaya devam edilir
-
+//!#################################################################
 //? ORNEK: Kullanicidan  Vize ve Final notlarini isteyen ve
 //? vize'nin %40 + final'in %60 alarak gecme notunu hesaplayan programi
 //? yaziniz. Program her hesaplamadan sonra tekrar başkası için hesaplama yapilmak
@@ -111,15 +143,14 @@
 // console.log("döngüden ciktik");
 
 
-//? ORNEK2: klavyeden q karakteri girilene kadar sayı girişi yapan bir programı döngü kullanarak yazınız.
+// //? ORNEK2: klavyeden q karakteri girilene kadar sayı girişi yapan bir programı döngü kullanarak yazınız.
 let sayi1;
 do {
-  sayi1 = prompt("lütfen sayı giriniz") 
+  sayi1 = prompt("lütfen sayi giriniz") 
 
-} while (sayi1 != "q");
+} while (sayi1 !== "q");
 
 console.log("bitti");
-
 
 
 

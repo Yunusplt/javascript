@@ -26,7 +26,7 @@ function adYazdir(ad, ikinciAd, soyad) {
 
 adYazdir("Kubilay", "Ozlem", "NIHAL")
 
-//! Ornek3 ######### parametreli, dönüs degerli ################ ben
+//! Ornek3 ######### parametreli, dönüs degerli ################
 
 function yasHesapla(ad, tarih) {
     console.log(`Benim adim ${ad} ve ben ${2023-tarih} yasindayim}`);
@@ -36,11 +36,12 @@ yasHesapla("ipek", 1979)
 yasHesapla("Yunus", 1992)
 
 //! Ornek3 ######### parametreli, dönüs degerli ################ hoca
+console.log("######################");
 
 
 function yasHesapla(ad,tarih){
 
-    console.log(`benim adım ${ad} ve ben  ${2023-tarih} yasındayım` );
+    console.log(`benim adim ${ad} ve ben  ${2023-tarih} yasindayim` );
 return 2023-tarih
 }
 

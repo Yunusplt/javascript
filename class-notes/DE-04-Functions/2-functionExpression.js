@@ -18,7 +18,21 @@ console.log("******** 2- EXPRESSION*******");
 const tekCift=function(sayi) {
 
     return sayi % 2 == 0 ? "cifttir" : "tektir"
-
 }
 
 alert(tekCift(15))
+
+
+function ciftTek(sayi) {
+    return sayi%2==0 ? "cift" : "tek"
+}
+
+alert(ciftTek(10))
+
+
+
+//!#############
+// ?#############
+//*#############
+//todo#############
+// öakfja-ldkfsja-
