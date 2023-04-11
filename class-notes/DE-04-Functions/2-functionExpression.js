@@ -50,40 +50,37 @@ return enBuyuk
 
 alert(buyukBul(3,5,9))
 
+//!###############################################
+//todo  4.DERS
+//!###############################################
 
-//!######## Ornek 3 #############
+//!######## Ornek 3 #############                                      
 
-const usAl= function(s1, s2) {
-    return s1**s2    
-}
+const usAl = function (s1, s2) {
+  return s1 ** s2;
+};
 
-const cevBul= function (s1, s2) {
-    (s1+s2)*2   
-}
+const cevreBul = function (s1, s2) {
+  return (s1 + s2) * 2;
+};
 
-const alanBul= function (s1,s2) {
-    return s1*s2
-}
+const alanBul = function (s1, s2) {
+  return s1 * s2;
+};
 
-const hesapla=function(secim, v1, v2) {
-    let result
-    if (secim=="alan") {
-        result=alanBul(v1,v2)
-    }
-    else if (secim=="cevre") {
-        result=cevBul(v1,v2)
-    }
-    else if (secim=="us") {
-        result=usAl(v1,v2)
-    }
-return result
-}
+const hesapla = function (secim, v1, v2) {
+  let sonuc;
 
-console.log(hesapla("alanin sonucu", "alan", 3, 5));
-console.log(hesapla("cevrenin sonucu", "cevre", 3, 5));
-console.log(hesapla("üstün sonucu", "us", 3, 5));
-
-
-
-//todo hata var düzelt
+  if (secim == "alan") {
+    sonuc = alanBul(v1, v2);
+  } else if (secim == "cevre") {
+    sonuc = cevreBul(v1, v2);
+  } else if (secim == "us") {
+    sonuc = usAl(v1, v2);
+  }
+  return sonuc;
+};
+console.log("alanin sonucu:", hesapla("alan", 3, 5));
+console.log("cevrenin sonucu:", hesapla("cevre", 3, 5));
+console.log("üs almanin sonucu:", hesapla("us", 3, 5));
 

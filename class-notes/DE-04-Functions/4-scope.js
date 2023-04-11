@@ -26,10 +26,10 @@ const scopeDeneme=function(){
 }
 
 //todo console.log ile yazdirirsin. disarda kullanmazsin. buna dikkat. ekrana yazdimak farkli kullanmak farkli...
-scopeDeneme();
-
-console.log(scopeDeneme());  // retunü de calistirir. icerdeki log u da.
+console.log(scopeDeneme());
+console.log("##########");
+//console.log(scopeDeneme());  // retunü de calistirir. icerdeki log u da.
 console.log(first);
 console.log(second);
-// console.log(fourth);  not defined
+//console.log(fourth);  //not defined
 scopeDeneme()
