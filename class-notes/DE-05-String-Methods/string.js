@@ -5,7 +5,17 @@ console.log("****STRİNG METHODS******");
 
 
 
-// todo burayi hocadan al 
+//! 1- Klasik yöntemle tanımlanan String ilkel (primitive) dir
+const str1="clarusway"
+const str2="hello"
+const str3="all the world"
+console.log(str2+str3, typeof(str2+str3));
+console.log(str2[str2.length-1]);
+
+//! 2- String constructor ile tanımlanan String non-primitive (ilkel olmayan) dir 
+ const str4=  new String("yeni bir String")
+
+ console.log(typeof str4);
 
 
 //! Normalde primitive veri tiplerinin property veya metodu olmaz.
@@ -241,13 +251,13 @@ console.log(tarkan.split("",3));  // G e l
 
 const ramazan="        Hos geldin ya Sehr i Ramazan        "
 console.log(ramazan);
-console.log(ramazan.length);
-console.log(ramazan.trim());
-console.log(ramazan.trim().length);
-console.log(ramazan.trimEnd());
-console.log(ramazan.trimEnd().length);
-console.log(ramazan.trimStart());
-console.log(ramazan.trimStart().length);
+console.log(ramazan.length);                    // 44
+console.log(ramazan.trim());                    //sag sol bosluk gitti 
+console.log(ramazan.trim().length);             // 28
+console.log(ramazan.trimEnd());                 // sag bosluk gitti
+console.log(ramazan.trimEnd().length);          //36
+console.log(ramazan.trimStart());               //sol bosluk gitti 
+console.log(ramazan.trimStart().length);        //36
 
 
 
