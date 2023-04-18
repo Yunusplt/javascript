@@ -20,19 +20,18 @@ const  car4 = {
 
 //* 1 klasik yol 
 
-console.log(car.title);
-console.log(car["model"]);
+console.log(car.title);                 // BMW
+console.log(car["model"]);              // 1990
 
 
 //* 2. yol 
 
 const{title, model}=car
 
-console.log(title, model, car.engine);
+console.log(title, model, car.engine);    // BMW 1990 1.6
 
 
 //*NESTED OBJECT example:
-
 const arabalar = {
   car1: {
     marka: "BMW",
@@ -51,44 +50,36 @@ const arabalar = {
   },
 };
 
-//! bunu nasil ortaya sacicammmmmmm ?????????ß
-
+//! bunu nasil ortaya sacicammmmmmm ?????????
 //* 1 klasik yol 
-
-console.log(arabalar.car1.renk);
-
+console.log(arabalar);                        //{car1: {…}, car2: {…}, car3: {…}}
+console.log(arabalar.car1.renk);              //red
+console.log(typeof arabalar);                 // object
+console.log(typeof arabalar.car1.renk);       // string
 
 //* 2. yol
-
 const{car1,car2,car3} = arabalar
-
-console.log(car1);
-console.log(car1.marka);
+console.log(car1);                     //{marka: 'BMW', model: 1990, renk: 'red'}
+console.log(car1.marka);                // BMW
 
 const{marka, renk} = car1
+console.log(renk);                      // red
 
-console.log(renk);
+
+
 
 
 //! kar ikinin keylerini farkli girmeliyiz. yoksa yukardaki car1 in keyleri ile karisir...... objecti olustururken farkli isimle olustursaydik. bu sefer döngüleri kullanip tüm markalara  ulasmak isteseydik ulasamazdik....
 
-
 const{marka:marka2, renk:renk2} = car2
 
-console.log(renk2);
+console.log(renk2);                                   // white 
 
 //!################  object-object gezinme ########################
-
 for(let i in arabalar){
-    console.log(arabalar[i].marka);
-
-
+    console.log(arabalar[i].marka);      // BMW \n MERCEDES \n AUDI
 }
-
-
-
 //! ########################################################################
-
 //* ornek: Array-Object gezinme-DEST
 const people = [
   {
@@ -98,44 +89,23 @@ const people = [
     age: 30,
   },
   {
-    name: "Halo",
+    name: "Thomas",
     surname: "Müller",
     job: "tester",
     age: 35,
-  },
-  {
-    name: "Mehmet",
-    surname: "Rosenberg",
-    job: "team lead",
-    age: 40,
-  },
-  {
-    name: "Ozkul",
-    surname: "Gutenberg",
-    job: "developer",
-    age: 26,
-  },
-
-  {
-    name: "Baser",
-    surname: "Shaffer",
-    job: "tester",
-    age: 24,
-  },
+  }
 ];
+for (let i in people) {
+  console.log(people[i].name);    // mustafa \n Thomas 
+}
+people.forEach((item)=>{
 
+    // console.log(item.name);
+    // console.log(item.surname);
 
-people.forEach((kisi)=>{
-
-    // console.log(kisi.name);
-    // console.log(kisi.surname);
-    // console.log(kisi.job);
-    // console.log(kisi.age);
-
-
-    const{name,surname,job,age} = kisi 
+    const{name,surname,job,age} = item
     //* bu sefer esitligin sag tarafini farkli yazdik. kisi . yazdik cünkü dizi icinde object var bu sefer.
-    console.log(name);
+    console.log(name);                  
     console.log(surname);
     console.log(job);
     console.log(age);
@@ -209,12 +179,13 @@ const personel={
 
 
 const{pName, ...gerisi} = personel
-console.log(pName);
-console.log(personel.job);
-console.log(gerisi);
+console.log(pName);                   // Johny
+console.log(personel.job);            // actor
+console.log(gerisi);                  // {surname: 'DEEP', job: 'actor', age: 55}
 
 //! gerisi yazmakla personel.job veya personel.surname yazmak ayni sey
 
+//!#########################################################################
 
 //*Object Kopya
 //? orginal diziyle ayni sartlarda bir kopya
@@ -247,7 +218,7 @@ ikizPersonel.age=100
 
 console.log(personel);        //100
 console.log(ikizPersonel);    //100
-console.log(gerisiKopya);     // 45
+console.log(gerisiKopya.age);     // 45
 
 //todo bu yüzden 3 nokta ile kopyalama yapmak daha mantikli... 
 
@@ -286,7 +257,8 @@ console.log(ikizNumber);
 console.log(number2);
 
 
-//! 2- bir fonksiyonun argument lerini diziye cevirmek icin kullanilabiilir,
+//todo 2- bir fonksiyonun argument lerini diziye cevirmek icin kullanilabiilir,
+
 //! ORNEK 1 ###############################################################
 const sum = (x,y) => x+y
 
@@ -294,28 +266,29 @@ console.log(sum(1,2,3,4,5,6));       // 3  sadece ilk iki parametreyi topladi.
 
 //! dogrusu
 
-const sum2=(...x) => {console.log(x);
-
-    console.log(x.reduce((toplam,a)=> toplam + a, 0));
-
-
+const sum2=(...x) => {
+    console.log(x);                         // [1, 2, 3, 4, 5, 6]
+    console.log(x.reduce((toplam,a)=> toplam + a, 0));   // 21
 }
-
 sum2(1,2,3,4,5,6)
 
-
+const sum3=(ilk, ikinci, ...x) => {
+    console.log(x);                           // [3, 4, 5, 6]
+    console.log(x.reduce((toplam,a)=> toplam + a, 0));  // 18
+}
+sum3(1,2,3,4,5,6)
 
 //! ORNEK 2 ###############################################################
 
-
 const show=(name, surname, ...title)=>{
-console.log(title);
-console.log(name);
-console.log(surname);
+console.log(title);              // ['developer', 'mom', 'chemistry', 'teacher']
+console.log(name);                // ozlem
+console.log(surname);             // kara
 
 console.log(`${name} ${surname} is a ${title}`);
+// ozlem kara is a developer and mom and chemistry and teacher
 console.log(`${name} ${surname} is a ${title.join(" and ")}`);
-
+// ozlem kara is a developer and mom and chemistry and teacher
 }
 
 show("ozlem", "kara", "developer", "mom", "chemistry", "teacher")
@@ -336,16 +309,18 @@ const zeug = ["Aircraft", "Helicopter", "Bicycle"]
 
 const otomobiles = ["Trucks", "Bus", "Car", "Suv"]
 
-console.log([zeug, otomobiles]);
+console.log([zeug, otomobiles]);         // [Array(3), Array(4)]
 
-console.log(zeug.concat(otomobiles));
+console.log(zeug.concat(otomobiles)); 
+//   ['Aircraft', 'Helicopter', 'Bicycle', 'Trucks', 'Bus', 'Car', 'Suv']
 
 console.log(...zeug, "Bus", ...otomobiles, "Tir");
+// Aircraft Helicopter Bicycle Bus Trucks Bus Car Suv Tir
 console.log([...zeug, "Bus", ...otomobiles, "Tir"]);
-
-console.log(...zeug);
-console.log("".concat(zeug));
-console.log(zeug.join(","));
+// ['Aircraft', 'Helicopter', 'Bicycle', 'Bus', 'Trucks', 'Bus', 'Car', 'Suv', 'Tir']
+console.log(...zeug);                     // Aircraft Helicopter Bicycle
+console.log("".concat(zeug));             // Aircraft,Helicopter,Bicycle
+console.log(zeug.join(","));              // Aircraft,Helicopter,Bicycle
 
 
 //!###################################################################
@@ -368,43 +343,32 @@ console.log(yeni);
 //!###################################################################
 //!###################################################################
 //!###################################################################
-//!###################################################################
-//!###################################################################
-
-
 
 
 //!diğer file daki örneği spread ile çözeceğiz
 //* Ornek4 people (object li ) dizisinden yaşları değişmiş olarak yeni bir object li dizi oluşturalım
-
-
 const insanlar = [
   {
     name: "Mustafa",
     surname: "Gertrud",
     job: "developer",
     age: 30,
-  },
-  {
+  },{
     name: "Halo",
     surname: "Müller",
     job: "tester",
     age: 35,
-  },
-  {
+  },{
     name: "Mehmet",
     surname: "Rosenberg",
     job: "team lead",
     age: 40,
-  },
-  {
+  },{
     name: "Ozkul",
     surname: "Gutenberg",
     job: "developer",
     age: 26,
-  },
-
-  {
+  },{
     name: "Baser",
     surname: "Shaffer",
     job: "tester",
@@ -419,16 +383,10 @@ const yeniPeople = insanlar.map((kisi) => ({
   age: kisi.age + 5,
 }));
 
-
 // insanlar.map((kisi)=>{bu süslünün amaci object oldugunu anlasin diye})
 const yeniinsan=insanlar.map((kisi)=>({
-
     ...kisi, age:kisi.age+5 //...kisi objectleri süslerinden kurtarir.
-
-
-
 }))
-
 
 console.log(yeniinsan);
 
