@@ -12,7 +12,7 @@ console.log("Nesneler");
 //* ---------------------------------------------------------
 
 const bosObject= new Object({})
-console.log(bosObject);
+console.log(bosObject);               // {}
 
 const car1= new Object({name: "BMW", engine:1.6, model:2000})
 console.log(car1);                 // {name: 'BMW', engine: 1.6, model: 2000}
@@ -27,6 +27,7 @@ car2.motor=2.0
 car2.model=2001
 
 console.log(car2);             //  {name: 'Mercedes', motor: 2, model: 2001}
+console.log(typeof car2);      // object
 
 
 
@@ -35,9 +36,19 @@ console.log(car2);             //  {name: 'Mercedes', motor: 2, model: 2001}
 //* ==================================================================
 
 
-//? kalip olusturup ayni seyleri yazarken isleri kolaylastirmaka amac.
+//? kalip olusturup ayni seyleri yazarken isleri kolaylastirmak amac.
 
-function calisanlar(id, isim, maas) {
+// class Calisanlar {
+//   constructor(id, isim, maas) {
+//     this.calisanId = id;
+//     this.calisanName = isim;
+//     this.calisanMaas = maas;
+//     console.log(this); // tüm herkesi yazdirdi.
+
+//   }
+// }
+
+function Calisanlar(id, isim, maas) {
     this.calisanId=id
     this.calisanName=isim
     this.calisanMaas=maas
@@ -47,16 +58,17 @@ function calisanlar(id, isim, maas) {
 
 //! eger onject consructor kullancak isek this gerekli, arrow function da this kullanimi saglikli olmadigindan burada deceleration functuíon kullandik.
 //! this keyword'u icinde bulundugu scope'daki objeyi refere eder
-console.log(this); 
+console.log(this);     // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
 //? Global scope da oldugumuzdan dolayi browser penceresinin en temel objesini yani window'u gosterir
  
-const kisi1=new calisanlar(101, "Mehmet", 80000)
-const kisi2=new calisanlar(102, "Osman", 90000)
-const kisi3=new calisanlar(103, "Nergis", 100000)
+const kisi1=new Calisanlar(101, "Mehmet", 80000)
+const kisi2=new Calisanlar(102, "Osman", 90000)
+const kisi3=new Calisanlar(103, "Nergis", 100000)
 
-console.log(kisi1);
-console.log(kisi2);
-
+console.log(kisi1);                     // calisanlar {calisanId: 101, calisanName: 'Mehmet', calisanMaas: 80000}
+console.log(kisi2);                     // calisanlar {calisanId: 102, calisanName: 'Osman', calisanMaas: 90000}
+console.log(typeof Calisanlar)          // function
+console.log(typeof kisi1);              // object
 //! arrow function this keywoddu desteklenmiyor.
 
 
@@ -74,9 +86,9 @@ const person={
     birth : 1970,
     job : "actor",
     hasDriverLicence: true,
-    // agefind: function () {
-    //     return new Date().getFullYear()-this.birth
-    // }
+    agefind: function () {
+    return new Date().getFullYear()-this.birth
+    },
 
     languages:["C", "C++", "JAVA", "PYTHON"]
 
@@ -84,9 +96,11 @@ const person={
 
 
 console.log(person);
-console.log(person.name);
-console.log(person["job"]);
-console.log(person.languages[2]);
+console.log(person.name);                     // Johny 
+console.log(person["job"]);                   //  actor
+console.log(person.languages[2]);             // JAVA
+console.log(person.birth);                    // 1970
+//? bu birth alttaki degisiklikten sonra yazilmasina ragmen hala 1970 olarak geliyor. 
 
 
 
@@ -212,6 +226,7 @@ const people = [
 
   console.log(ages);
   console.log(people[0].age);
+  console.log(people[0]);
 
 
 
@@ -284,6 +299,96 @@ console.log(newPeop);
 //! ornek 8 ortalama yasi hesaplayiniz.
 
 console.log(people.reduce((toplam, eleman)=>toplam + eleman.age, 0)/people.length)
+
+
+
+
+//todo######################################################################
+
+//!                    9. Ders
+
+//todo######################################################################
+
+
+//! Nested Objects
+
+const people3 = {
+  person1: {
+    name: "Can",
+    surname: "Canan",
+    dob: "1990",
+    job: "developer",
+    salary: "140000",
+    drivingLicense: true,
+  },
+  person2: {
+    name: "John",
+    surname: "Sweet",
+    dob: "1990",
+    job: "tester",
+    salary: "110000",
+    drivingLicense: false,
+  },
+  person3: {
+    name: "Steve",
+    surname: "Job",
+    dob: "2000",
+    job: "developer",
+    salary: "90000",
+    drivingLicense: true,
+  },
+};
+
+
+//?  ornek  #######    people3 object indeki tüm salaryleri yazdiririn(döngü kullanilmali)
+
+
+//! FOR - IN kullanılabilir, index sonuçta. Ama for of kullanılamaz , dizilerde verileri almak için itere eden for of object te çalışmaz
+//!!!!JavaScript'te, iterable protokolü uygulamadıkça Objects iterable değildir. Bu nedenle, bir object in özellikleri üzerinde iterate yapmak için for…of (forEach, map, filter da) kullanamazsınız. sadece klasik for döngüsü ve for in kullanılabilir
+
+
+//* for in kullanirsak index alir. sonuc 0, 1, 2 olur, objectte gezinirse isimleri yani keyler (people1, people2, people3) gelir.
+
+
+
+for(let i in people3){
+
+  console.log(i);
+  console.log(people3[i].salary);
+  console.log(people3[i].name);
+
+
+
+}
+
+console.log(people3["person1"].salary);  //? yukarsa bunu yapiyor aslinda.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
