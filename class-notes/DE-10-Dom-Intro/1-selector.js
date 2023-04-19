@@ -5,7 +5,7 @@
 
 //! example_1 (button style) ##################################################
 
-const button = document.getElementById("btn")
+const button = document.getElementById("btn")    // btn is Id name
 
 button.style.width = "200px"
 button.style.height = "80px"
@@ -16,12 +16,12 @@ button.style.backgroundColor = "red"
 
 //! example_2 (pragraph style) ##################################################
 
-const paragraf = document.getElementById("par")
+const paragraf = document.getElementById("par")  // par is Id name 
 
 paragraf.style.backgroundColor = "gray"
 paragraf.style.color = "orange"
 paragraf.style.fontSize = "50px"
-paragraf.style.padding = "5px"
+paragraf.style.padding = "10px"
 
 //!##############################################################################
 
@@ -49,15 +49,16 @@ resim[1].style.border = "5px solid red"
 //* class ismiyle çağırıyoruz
 //*======================================================
 
+const baslik = document.getElementsByClassName("H1")   // H1 is class name 
 
-const baslik = document.getElementsByClassName("H1")
-
-console.log(baslik);                //HTML Collection
+console.log(baslik);                                  //HTML Collection
 
 baslik[0].style.color = "red"
 baslik[1].style.textAlign = "center"
 
 //! array'i degistiren methodlari kullanabiliriz.
+//! tüm ayni isimdeki classlara erisip degisiklik yapmak icin
+//! asagidaki gibi for döngüsü kullanilabilir.
 
 for (let i=0 ; i < baslik.length; i++){
 
@@ -65,7 +66,7 @@ for (let i=0 ; i < baslik.length; i++){
     baslik[i].style.fontSize = "50px"
 
 }
-
+//todo yukarda kirmizi deniyor asagida purple deniyor. asagida olan kazanir. 
 //!######################################################################
 
 baslik[0].innerHTML=" <a href='https://www.clarusway.com' >DOM COK KOLAY</a> "
