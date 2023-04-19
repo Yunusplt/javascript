@@ -28,13 +28,14 @@ paragraf.style.padding = "10px"
 
 //* =============================================================================
 //*                   getElementByTAGNAME()
-//* tag ismiyle çağırıyoruz.aynı tag den çok olacağı için index le hangisini seçtiğimizi belirtiyoruz (HTMLCollection- Array özellikleri gösterir)
+//* tag ismiyle çağırıyoruz.aynı tag den çok olacağı için index le 
+//* hangisini seçtiğimizi belirtiyoruz (HTMLCollection- Array özellikleri gösterir)
 //*=============================================================================
 
 
 //! example_3  (img style) ######################################################
 
-const resim = document.getElementsByTagName("img")
+const resim = document.getElementsByTagName("img")    //img is tag name
 
 console.log(resim);                  // HTML Collection 
 
@@ -84,15 +85,20 @@ baslik[1].textContent = "NASILSIN"
 //*====================================================================================
 
 document.querySelector("title").textContent="DOM MANiPULATION 💜"
+
 document.querySelector("#badi").style.backgroundImage="linear-gradient(green, pink)"
-document.querySelector(".H2").style.color="yellow"
+
+document.querySelector(".H2").style.color="yellow"    // HOSGELDIN
+
 //todo birden fazla h2 olsa ilkini alirdi. 
+
 document.querySelector("p")     //! ilk p getirir.
+
 document.querySelectorAll("p")  //! tüm p ler geldi. 
+
 console.log(document.querySelectorAll("p"));            // NodeList
 
-document.querySelectorAll("p")[1].style.fontSize = "70px"
-
+document.querySelectorAll("p")[1].style.fontSize = "70px"      // NABER
 
 //!###################################################################################
 
