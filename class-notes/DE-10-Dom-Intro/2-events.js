@@ -16,15 +16,13 @@
     // >JAVASCRIPT'TE DOM</h1>
 
 
-
-
 //? METHOD-2 (Function calling in HTML)
 //?---------------------------------------------------------------
 //todo alltaki satirlar HTML'de yazildi. iki alt satirdakileri uygulamak icin 
 
     // <h1 class="H5" 
     // onmouseover = "yesil()"
-    // onmouseout="kirmizi()"
+    // onmouseout = "kirmizi()"
     // >DOM BASICS</h1>
 
 // JAVASCRIPT
@@ -34,7 +32,7 @@ const yesil =()=>baslik.style.color = "green"
 
 // yesil()   //! yesil fonksiyonu cagirildigi zaman yesil yapar. 
 
-const kirmizi = () => baslik.style.color = "orange"
+const kirmizi = () => baslik.style.color = "red"
 
 // kirmizi()
 
@@ -45,14 +43,14 @@ const kirmizi = () => baslik.style.color = "orange"
 
 //* Example_1 **********************************************************************
 
-document.querySelector("#js").onmouseover=()=>{
+document.querySelector("#js").onmouseover=()=>{    // MERHABA
 
     document.querySelector("#badi").style.backgroundColor="pink"
     document.querySelector("#js").style.color="purple"
     
 }
 
-document.querySelector("#js").onmouseout=()=>{
+document.querySelector("#js").onmouseout=()=>{      // MERHABA
 
     document.querySelector("#badi").style.backgroundColor="red"
     document.querySelector("#js").style.color="yellow"
@@ -73,28 +71,21 @@ document.querySelector("#js").onmouseout=()=>{
 //!##################################################################################
 
 //* Example_2 (onclick-ondblclick)*************************************************
-
-
 const birinci = document.querySelector(".bir")
 const ikinci = document.querySelector(".iki")
 
 // birinci.onclick=()=>{
-
 //     birinci.src="./img/logo2.png"
 //     ikinci.src="./img/js_logo.png"
-
 // }
 
 // ikinci.onclick=()=>{
-
 //     birinci.src="./img/js_logo.png"
 //     ikinci.src="./img/logo2.png"
-
 // }
 //! neden yukardakini kullanmadik. cünkü yukardakinde 1. olmadan 2. olmasi mantikli degil. bunu aktiflestirmek icin 1. olduktan sonra 2. olmali dedik ve bunu algoritmaya doktuk. 
 //! 1.yol ########################
 birinci.onclick=()=>{
-
     birinci.src="./img/logo2.png"
     ikinci.src="./img/js_logo.png"
     icerde()
@@ -102,23 +93,18 @@ birinci.onclick=()=>{
 
 const icerde = () => {
     ikinci.onclick=()=>{
-
-    birinci.src="./img/js_logo.png"
-    ikinci.src="./img/logo2.png"
+        birinci.src="./img/js_logo.png"
+        ikinci.src="./img/logo2.png"
     }
 }
-
 //! 2.yol #########################
 // birinci.onclick=()=>{
-
 //     birinci.src="./img/logo2.png"
 //     ikinci.src="./img/js_logo.png"
 
 //     ikinci.onclick=()=>{
-
 //     birinci.src="./img/js_logo.png"
 //     ikinci.src="./img/logo2.png"
-
 // }
 // }
 
