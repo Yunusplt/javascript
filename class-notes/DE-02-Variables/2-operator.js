@@ -4,7 +4,7 @@ const peynir=200;
 
 let toplam = sucuk+cola+peynir;
 
-console.log(toplam);
+console.log(toplam); 
 
 //!bir arttirma
 
@@ -20,7 +20,7 @@ toplam+=10;
 
 console.log(toplam);
 
-//? + operatörü String Concatination işlemi de yapar.
+//? + operatörü String Concatenation işlemi de yapar.
 
 const ad="Yunus"
 const soyad="Polat"
@@ -35,9 +35,11 @@ console.log(`Adim ve soyadim ${ad} ${soyad}`);
 const s1=5;
 const s2="7";
 
-console.log(s1+s2); //57
+console.log(s1+s2);                  //57
+console.log(typeof(s1+s2));                  // string
 //* çıkarma işleminde verilerden biri number ise diğeri tırnaklı number olsa bile çıkarma yapar
-console.log(s1-s2); //-2
+console.log(s1-s2);                 //-2
+console.log(typeof(s1-s2));                 // number 
 
 
 const s3="iki"
@@ -66,8 +68,8 @@ console.log("ilk", a++,a);   //ilk 5 6
 console.log("ikinci", a);
 
 let b=a++
-console.log(a);
-console.log(b);
+console.log(a);          // 7
+console.log(b);          // 6 
 
 console.log("++++++++++++++++++++++++++++++++");
 
@@ -95,11 +97,11 @@ const r=3;
 
 const alan = pi*r**2;
 
-console.log(alan); //28.26
+console.log(alan);                      //28.26
 
 const cevre=2*pi*r
 
-console.log(cevre); // 18.84
+console.log(cevre);                    // 18.84
 
 
 // Math.floor();  //* her zaman en yakın alt tamsayıya yuvarlar
@@ -109,8 +111,8 @@ console.log(cevre); // 18.84
 
 // Math.random(); //* 0 ve 1 arasında rasgele sayı üretir.
 
-console.log(Math.floor(alan));  //28
-console.log(Math.floor(cevre)); //18
+console.log(Math.floor(alan));              // 28.26 ---> 28
+console.log(Math.floor(cevre));             //18.84  ---> 18
 
 
 console.log(Math.ceil(alan)); //29
@@ -246,7 +248,7 @@ console.log(Number("0o11")); // 9 o=octal=8
 
 
 
-console.log(Number("sayi")); //NAN
+console.log(Number("sayi"));     //NAN
 
 
 

@@ -44,23 +44,23 @@ console.log(typeof dolar);  // number
 
 let dil="JavaScript";
 dil="java";
-console.log(dil);   //java
+console.log(dil);                   //java
 
 dil = true;
 
-console.log(typeof dil);
+console.log(typeof dil);            // boolean
 
 let sayi=5;
-console.log(7+sayi);   //12
+console.log(7+sayi);                //  12
 
 let sayi1="5";
-console.log(7+sayi1);  //75
+console.log(7+sayi1);               //  75  bu pythonda hata verir.. weil ein nummer und ein string kann man nicht rechnen.
 
-console.log(typeof (sayi1+sayi));  //String  string + number = string
+console.log(typeof (sayi1+sayi));   // String  string + number = string
 //! bir string ile number toplanırsa aslında toplama yapmaz, onları iki kelime gibi yanyana yazar
-isim="ipek";
+isim="ipek"; 
 
-console.log(typeof isim)
+console.log(typeof isim)            // string  
 
 // const veya let yazmazsak default olarak var olarak tanimlar. 
 
@@ -79,28 +79,27 @@ console.log(typeof isim)
 
 var sayi2 = 5
 sayi2 = 10
-console.log(sayi2)
+console.log(sayi2)                // 10
 
 console.log("******************************");
 
-var ilk="GLOBAL"
-console.log(ilk);   //GLOBAL
+var ilk="GLOBAL" 
+console.log(ilk);                 //GLOBAL
 
 
 {
-
-    console.log(ilk);  //GLOBAL
+    console.log(ilk);             //GLOBAL
 
     ilk="degistim";
 
-    console.log(ilk);  //degistim
+    console.log(ilk);             //degistim
 
-    var ikinci="naber"
+    var ikinci="naber"            
 }
 
-console.log(ilk);   //degistim
+console.log(ilk);                 //degistim
 
-console.log(ikinci);  //naber
+console.log(ikinci);              //naber
 
 // var keywordü kullanilinca blok icerisinde ve disarisinda variable a erisilir. Eger var ile blok icinde tanimlanmissa blok disinda da variable a erisilir.
 
@@ -112,46 +111,46 @@ console.log("******************************");
 
 let first="Osman";
 
-console.log(first);  // Osman
+console.log(first);                  // Osman
 
 
 {
 
-    console.log(first);  // Osman
+    console.log(first);             // Osman
 
     let second="Halit";
 
-    console.log(second);  // Halit
+    console.log(second);            // Halit
 
     first="Hüseyin"
 
-    console.log(first); // Hüseyin
+    console.log(first);             // Hüseyin
 }
 
 //console.log(second);
 
-console.log(first);   // Hüseyin 
-//console.log(second);    //Localde let ile tanimlanan second globalde gözükmez. var ile tanimlansaydi gözükürdü.
+console.log(first);                 // Hüseyin 
+//console.log(second);              //Localde let ile tanimlanan second variable'i globalde gözükmez. var ile tanimlansaydi gözükürdü.
 
 
 //! LET TEKI ayni islemleri const icinde yaptik 
 
 const erste="nihal"
 
-console.log(erste);
+console.log(erste);                   //  nihal
 
 {
 
-    console.log(erste);
+    console.log(erste);               // nihal
 
     //const erste="irfan"  degistirilemez
 
     const zweite="Özlem"
-    console.log(zweite);
+    console.log(zweite);              // Ozlem
 
 }
 
-// console.log(zweite); göremezzzz scope icinde tanimlandi cunkuuuuuu.
+// console.log(zweite); göremezzzz scope icinde tanimlandi cunkuuuuuu.  
 
 
 
