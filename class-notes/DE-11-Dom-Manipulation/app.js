@@ -165,9 +165,3 @@ document.querySelector(".sil").onclick=()=>{
 
 
 
-
-
-
-
-
-
