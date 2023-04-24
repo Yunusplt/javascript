@@ -39,15 +39,15 @@ yasHesapla("Yunus", 1992)
 console.log("######################");
 
 
-function yasHesapla(ad,tarih){
+function yasHesapla1(ad,tarih){
 
     console.log(`benim adim ${ad} ve ben  ${2023-tarih} yasindayim` );
 return 2023-tarih
 }
 
-const ipek=yasHesapla("ipek", 1979);   
-const yunus=yasHesapla("yunus",1990)
-const fatih=yasHesapla("fatih",2000)
+const ipek=yasHesapla1("ipek", 1979);   
+const yunus=yasHesapla1("yunus",1990)
+const fatih=yasHesapla1("fatih",2000)
 
 console.log(ipek, yunus, fatih );
 

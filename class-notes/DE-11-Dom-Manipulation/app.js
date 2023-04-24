@@ -131,7 +131,7 @@ document.querySelector(".ekle").onclick=()=>{
 liste.innerHTML+= ` <li> ${dil.value} </li>`
 // liste.innerHTML = innerHTML + ` <li> ${dil.value} </li>`
 
-dil.value=""
+dil.value=""    // input kutusu bos gözükmesi icin.
 }
 
 

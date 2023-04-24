@@ -13,7 +13,7 @@ let third=123;
 
 console.log(first,second,third);
 
-const scopeDeneme=function(){
+const scopeDeneme=()=>{
 
     first=8;
 

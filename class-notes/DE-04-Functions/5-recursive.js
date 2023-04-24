@@ -41,6 +41,29 @@ console.log("************ 5- RECURSION *************");
 //? FIBONACCI terimleri: 1, 1, 2, 3, 5, 8, 13, 21, ...
 //!fibonacci dizisindeki ilk n. terimi  bulma fonksiyonu
 
+
+// todo  uzun yol 
+
+const fiboFind = (n) => {
+ let fiboLeft = 1
+  let fiboRight = 1
+
+  for (let i = 0; i < n-2 ; i++) {
+
+ 
+
+  let fiboNewRight = fiboLeft + fiboRight
+  fiboLeft = fiboRight
+  fiboRight = fiboNewRight
+    
+  }
+  return fiboRight
+}
+
+console.log(fiboFind(6))
+
+//todo with recursive 
+
 const fibo=(n)=>{
 
 if(n<2){
