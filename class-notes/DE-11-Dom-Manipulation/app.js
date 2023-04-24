@@ -145,6 +145,21 @@ document.querySelector(".sil").onclick=()=>{
 
 }
 
+//!####################################################################
+
+// todo enter a basinca da ekleme yap....
+// todo klavyedeki keyCodelari kullanarak kod yazma.
+
+dil.onkeydown=(taste)=>{
+// console.log(taste.keyCode); 
+// inputta iken bastigim her tus console da keyCode u verir. 
+// console.log(taste);
+// console.log(taste));event larda alınan parametreler (tus) bize event la ilgili özelliklerin olduğu bir nesne döndürür. burada keyCode property sini kullandık
+
+if(taste.keyCode === 13){
+    document.querySelector(".ekle").click()
+}
+}
 
 
 
