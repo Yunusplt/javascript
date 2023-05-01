@@ -34,7 +34,7 @@ listeButon.onclick=()=>{
 
         //todo p yi ekrana bastirmanin 2. yolu 
         // todo <p>${listeInput.value}</p> 
-
+        console.log(listeInput.value);
         total.textContent = total 
 
         listeInput.value=""

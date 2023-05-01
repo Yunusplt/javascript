@@ -21,16 +21,17 @@
     <title>checkout</title>
 </head>
 <body>
+
  
 <h1 class="text-center text-danger m-4">Checkout Page</h1>
 
 
-<main class="container d-flex justify-content-center">
+<main class="container d-flex justify-content-center bg-black">
 <section class="bg-light w-75">
-<!-- <form  class=" p-2">
+<form  class="newProduct p-2">
             <div class="mb-3">
               <label for="add-name" class="form-label">Product Name</label>
-              <input type="text" class="form-control bir" id="add-name" required />
+              <input type="text" class="form-control bir" id="add-name" value="" required />
             </div>
             <div class="mb-3">
               <label for="add-price" class="form-label">Product Price</label>
@@ -38,18 +39,19 @@
                 type="number"
                 class="form-control iki"
                 id="add-price"
+                value=""
                 required
               />
             </div>
          
             <label for="add-adet" class="form-label">Product </label>
-            <div class="input-group mb-3">
-           
+            <div class="input-group mb-3">       
               <input
                 type="url"
                 class="form-control üc"
                 id="add-adet"
                 aria-describedby="basic-addon3"
+                value=""
                 required
               />
             </div>
@@ -58,10 +60,82 @@
                 <i class="fa-solid fa-cart-plus me-2"></i>Add To Cart
               </button>
             </div>
-          </form> -->
-<article id="urun-rowlari"></article>
+          </form>
+<article id="urun-rowlari">
+  <!-- <div class="card mb-3" style="max-width: 540px;">
 
-<article id="odeme-table"></article>
+  <div class="row g-0">
+
+    <div class="col-md-5">
+      <img src=${img}  class=" w-100 rounded-start" alt="img here">
+    </div>
+
+    <div class="col-md-7 ">
+
+      <div class="card-body">
+      
+        <h5 class="card-title">Vintage Backpack</h5>
+        
+             <div class="ürün-price">
+                    <p class="text-warning h2">
+                      <span class="indirim-price">$24.49</span>
+                      <span class="h5 text-dark text-decoration-line-through">34.99</span>
+                    </p>
+                  </div>
+
+                  
+                  <div
+                    class="border border-1 border-dark shadow-lg d-flex justify-content-center p-2"
+                  >
+                    <div class="adet-controller">
+                      <button class="btn btn-secondary btn-sm minus">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <p class="d-inline mx-4" id="ürün-adet">1</p>
+                      <button class="btn btn-secondary btn-sm plus">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+
+                  </div>
+
+                  <div class="ürün-removal mt-4">
+                    <button class="btn btn-danger btn-sm w-100 remove-ürün">
+                      <i class="fa-solid fa-trash-can me-2"></i>Remove
+                    </button>
+                  </div>
+
+                  <div class="mt-2">
+                    Ürün Toplam: $ <span class="ürün-toplam">24.99</span>
+                  </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+</article>
+
+<article id="odeme-table">
+<!-- <table class="table">
+            <tbody>
+              <tr class="text-end">
+                <th class="text-start">Aratoplam</th>
+                <td>$<span class="aratoplam">0.00</span></td>
+              </tr>
+              <tr class="text-end">
+                <th class="text-start">Vergi(18%)</th>
+                <td>$<span class="vergi">0.00</span></td>
+              </tr>
+              <tr class="text-end">
+                <th class="text-start">Kargo</th>
+                <td>$<span class="kargo">0.00</span></td>
+              </tr>
+              <tr class="text-end">
+                <th class="text-start">Toplam</th>
+                <td>$<span class="toplam">0.00</span></td>
+              </tr>
+            </tbody>
+          </table> -->
+</article>
 
 </section>
 
