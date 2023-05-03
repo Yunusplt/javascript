@@ -22,11 +22,13 @@
 // const bekle=(ms)=>{
 // const start=new Date().getTime()
 // while(new Date().getTime()<start+ms){
-    
-// }
 
 // }
-// console.log("hello");
+// console.log(start);
+// console.log(new Date().getTime());
+// }
+
+console.log("hello1");
 
 // console.time("timer1")//kronometreyi başlat
 // bekle(3000)
@@ -40,11 +42,13 @@
 //     console.log("selamlar");
 // },2000)
 
-// console.log("hello");
+// console.log("hello2");
 
 // setTimeout(()=>{
 //     console.log("naber nasilsin");
 // },3000)
+
+//todo setTimeout macrotaskqueue girer ve hello 2 selamlardan önce basilir.
 
 //!hello-Selamlar- Naber napıyorsun çalışır, 3. nün süresi 1.den azsa, 2-3-1 sırasında çalışır
 //!settimeout müsait zamanda ortaya çıkar, onun sırası geçtiğinde alttaki işlemler bitince çalışır
