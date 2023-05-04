@@ -21,13 +21,53 @@
 //! JavaScript finally anahtar kelimesi hata oluşması veya oluşmaması durumunda (her durumda) çalışacak kodları yazdırmak için kullanılır.
 
 
+// const veriGetir=async ()=>{
+
+//   const response=  await fetch("https://api.tvmaze.com/search/shows?q=girls");
+
+//          const veri=    await  response.json()
+// //  console.log(veri);
+//                   ekranaBastir(veri)
+// }
+
+// veriGetir()
+
+// const ekranaBastir=(data)=>{
+
+// data.forEach((item)=>{
+// document.querySelector("section").innerHTML += `
+//   <h1>Name: <span class="text-danger"> ${item.show.name}</span></h1>
+
+//  <img src=${item.show.image.medium}  />
+
+//  <h3 class="fst-italic">${item.show.genres}</h3>
+  
+ 
+//   `;
+    
+// })
+
+// }
+
+
 const veriGetir=async ()=>{
 
-  const response=  await fetch("https://api.tvmaze.com/search/shows?q=girls");
+  try{
+    const response=  await fetch("https://api.tvmaze.com/search/shows?");
 
-         const veri=    await  response.json()
+  if (!response.ok) {
+    throw new Error(`hata var. ${response.status}`)
+  }
+
+    const veri=    await  response.json()
 //  console.log(veri);
-                  ekranaBastir(veri)
+  ekranaBastir(veri)
+  }catch(error){
+    console.log(error);
+    console.log("try-catch sayesinde koda devam");
+  }finally{
+    console.log("trozdem Danke");
+  }
 }
 
 veriGetir()
@@ -38,17 +78,9 @@ data.forEach((item)=>{
 document.querySelector("section").innerHTML += `
   <h1>Name: <span class="text-danger"> ${item.show.name}</span></h1>
 
- <img src=${item.show.image.medium}  />
+ <img src=${item.show.image.medium} />
 
- <h3>${item.show.genres}</h3>
-  
- 
-  `;
-    
+ <h3 class="fst-italic">${item.show.genres}</h3>
+  `; 
 })
-
-  
-
-
-
 }

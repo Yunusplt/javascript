@@ -30,12 +30,12 @@
 //? then() ve catch() metotlari promise dondururler.
 //? Zincirleme olarak kullanilabilirler.
 
-console.log("promise başlıyor");
+console.log("promise başliyor");
 const person = { name: "Ali", surname: "Gel" };
 
 new Promise((resolve, reject) => {
   resolve(person);
-  reject(new Error("promise başarısız"));
+  reject(new Error("promise başarisiz"));
 })
   .then((res) => {
     console.log(res);
@@ -62,16 +62,16 @@ const brewTea = () => {
     .then((status2) => {
       console.log(status2);
 
-      return "Çay hazır. Afiyet olsun";
+      return "Çay hazir. Afiyet olsun";
     }).catch((err) => console.log(err));
 };
 const boil = () => {
   return new Promise((resolve, reject) => {
     const boiled = Math.floor(Math.random() * 5); //!0 tutarsa false
     if (boiled) {
-      resolve("Su Kaynadı");
+      resolve("Su Kaynadi");
     } else {
-      reject(new Error("Kettle Başarısız"));
+      reject(new Error("Kettle Başarisiz"));
     }
   });
 };
@@ -82,7 +82,7 @@ const addTea = () => {
     if (teaAvalaible) {
       resolve("Çay Eklendi");
     } else {
-      reject(new Error("Çay kalmamış"));
+      reject(new Error("Çay kalmamiş"));
     }
   });
 };
@@ -90,4 +90,11 @@ const addTea = () => {
  brewTea();
 
 
+//?----------------------------------------------------
+//* 1- XMLHttpRequest (Eski yontem, Ornek: AJAX)
+//? https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+//* 2- Promise,
+//*daha tercih edilenler
+//! 3- Fetch API (Promise'in basitlestirilmis hali),
+//! 4- ASYNC-AWAIT (Fetch API'nin makyajlanmis hali)
  
