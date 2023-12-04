@@ -48,7 +48,7 @@ console.log(typeof car2);      // object
 //   }
 // }
 
-function Calisanlar(id, isim, maas) {
+function Calisanlar(id, isim, maas) {     //! function Decleration
     this.calisanId=id
     this.calisanName=isim
     this.calisanMaas=maas
